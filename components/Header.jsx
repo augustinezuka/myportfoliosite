@@ -11,11 +11,9 @@ export default function Header() {
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-2xl font-bold">
           <Link href="/" className="flex items-center space-x-2">
-           
             <span className="text-red-950 transition duration-300 hover:text-red-200">
               Welcome to my portfolio
             </span>{" "}
-          
           </Link>
         </div>
 
@@ -27,9 +25,7 @@ export default function Header() {
           <Menu className="w-6 h-6 text-black" />
         </button>
 
-      
         <nav className="hidden lg:flex lg:space-x-6">
-          <h1>Menu</h1>
           {["Home", "Projects", "About", "Contact"].map((item) => (
             <Link
               key={item}
@@ -41,13 +37,13 @@ export default function Header() {
           ))}
         </nav>
 
-        
         <nav
           className={`${
             isOpen ? "translate-x-0" : "translate-x-full"
           } fixed top-0 right-0 w-64 h-full bg-gradient-to-r from-red-100 to-blue-100 lg:hidden transition-transform duration-300`}
         >
           <div className="flex flex-col items-start p-4">
+            <h1 className="text-black text-xl">Menu</h1>
             <button
               className="self-end mb-4"
               onClick={() => setIsOpen(false)}
