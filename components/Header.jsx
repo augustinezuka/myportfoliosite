@@ -13,7 +13,7 @@ export default function Header() {
           <Link href="/" className="flex items-center space-x-2">
             <span className="text-red-950 transition duration-300 hover:text-red-200">
               Welcome to my portfolio
-            </span>{" "}
+            </span>
           </Link>
         </div>
 
@@ -29,7 +29,7 @@ export default function Header() {
           {["Home", "Projects", "About", "Contact"].map((item) => (
             <Link
               key={item}
-              className="py-2 text-gray-700 hover:text-blue-500  transition duration-200"
+              className="py-2 text-gray-700 hover:text-blue-500 transition duration-200"
               href={`/${item.toLowerCase()}`}
             >
               {item}
@@ -43,14 +43,17 @@ export default function Header() {
           } fixed top-0 right-0 w-64 h-full bg-gradient-to-r from-red-100 to-blue-100 lg:hidden transition-transform duration-300`}
         >
           <div className="flex flex-col items-start p-4">
-            <h1 className="text-black text-xl">Menu</h1>
-            <button
-              className="self-end mb-4"
-              onClick={() => setIsOpen(false)}
-              aria-label="Close Navigation"
-            >
-              <X className="w-6 h-6 text-black" />
-            </button>
+            <div className="inline-flex w-full justify-between">
+              <h1 className="text-black text-2xl">Menu</h1>
+              <button
+                className="self-end"
+                onClick={() => setIsOpen(false)}
+                aria-label="Close Navigation"
+              >
+                <X className="w-6 h-6 text-black" />
+              </button>
+            </div>
+
             {["Home", "Projects", "About", "Contact"].map((item) => (
               <Link
                 key={item}
@@ -60,9 +63,11 @@ export default function Header() {
                 {item}
               </Link>
             ))}
+
             <a
               href="/resume.pdf"
-              className="mt-4  text-blue-600 px-4 py-2 rounded-lg underline transition duration-300 transform hover:scale-105"
+              className="mt-4 text-blue-600 px-4 py-2 rounded-lg underline transition duration-300 transform hover:scale-105"
+              download="assets/Augustine_Resume.pdf"
             >
               Download Resume
             </a>
@@ -73,6 +78,7 @@ export default function Header() {
           <a
             href="/resume.pdf"
             className="bg-white text-blue-600 px-4 py-2 rounded-lg shadow hover:bg-gray-100 transition duration-300 transform hover:scale-105"
+            download="assets/Augustine_Resume.pdf"
           >
             Download Resume
           </a>

@@ -42,7 +42,7 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href="https://twitter.com/augustinezuka"
+              href="https://x.com/augustinezuka"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Twitter"
