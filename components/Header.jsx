@@ -15,7 +15,7 @@ export default function Header() {
             <span className="text-red-950 transition duration-300 hover:text-red-200">
               Welcome to my portfolio
             </span>{" "}
-            {/* Replace with your alternative name */}
+          
           </Link>
         </div>
 
@@ -27,12 +27,13 @@ export default function Header() {
           <Menu className="w-6 h-6 text-black" />
         </button>
 
-        {/* Desktop Navigation */}
+      
         <nav className="hidden lg:flex lg:space-x-6">
+          <h1>Menu</h1>
           {["Home", "Projects", "About", "Contact"].map((item) => (
             <Link
               key={item}
-              className="py-2 text-gray-700 hover:bg-blue-500 hover:text-black transition duration-200"
+              className="py-2 text-gray-700 hover:text-blue-500  transition duration-200"
               href={`/${item.toLowerCase()}`}
             >
               {item}
@@ -40,7 +41,7 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Mobile Navigation */}
+        
         <nav
           className={`${
             isOpen ? "translate-x-0" : "translate-x-full"
@@ -65,7 +66,7 @@ export default function Header() {
             ))}
             <a
               href="/resume.pdf"
-              className="mt-4 bg-white text-blue-600 px-4 py-2 rounded-lg shadow hover:bg-gray-100 transition duration-300 transform hover:scale-105"
+              className="mt-4  text-blue-600 px-4 py-2 rounded-lg shadow  transition duration-300 transform hover:scale-105"
             >
               Download Resume
             </a>
