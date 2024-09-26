@@ -11,9 +11,9 @@ export default function Header() {
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-2xl font-bold">
           <Link href="/" className="flex items-center space-x-2">
-            <span className="text-3xl text-red-950">🌐</span>
+           
             <span className="text-red-950 transition duration-300 hover:text-red-200">
-              [Alternative Name]
+              Welcome to my portfolio
             </span>{" "}
             {/* Replace with your alternative name */}
           </Link>
