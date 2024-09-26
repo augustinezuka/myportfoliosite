@@ -66,7 +66,7 @@ export default function Header() {
             ))}
             <a
               href="/resume.pdf"
-              className="mt-4  text-blue-600 px-4 py-2 rounded-lg shadow  transition duration-300 transform hover:scale-105"
+              className="mt-4  text-blue-600 px-4 py-2 rounded-lg underline transition duration-300 transform hover:scale-105"
             >
               Download Resume
             </a>
