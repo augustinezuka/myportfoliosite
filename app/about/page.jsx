@@ -4,8 +4,8 @@ import React from "react";
 const About = () => {
   return (
     <section className="h-full">
-      <div className="absolute inset-0 bg-gradient-to-r from-green-100 to-blue-500  h-full px-4">
-        <div className="container h-full mx-auto text-center">
+      <div className="absolute inset-0 bg-gradient-to-r from-green-100 to-blue-500 h-full px-4">
+        <div className="container mx-auto h-full flex flex-col justify-center items-center text-center">
           <h1 className="text-5xl font-bold text-black mb-6">About Me</h1>
           <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
             I am{" "}
@@ -15,8 +15,8 @@ const About = () => {
             technologies.
           </p>
 
-          <div className="flex flex-col md:flex-row md:justify-around mb-10">
-            <div className="bg-white mx-4 shadow-lg rounded-lg p-6 mb-6 md:mb-0 w-full md:w-1/3">
+          <div className="flex flex-col md:flex-row md:justify-between mb-10 w-full">
+            <div className="bg-white mx-2 shadow-lg rounded-lg p-6 mb-6 md:mb-0 flex-1 md:w-1/3">
               <h2 className="text-3xl font-semibold text-blue-600 mb-4">
                 My Skills
               </h2>
@@ -28,7 +28,7 @@ const About = () => {
               </ul>
             </div>
 
-            <div className="bg-white mx-4 shadow-lg rounded-lg p-6 mb-6 md:mb-0 w-full md:w-1/3">
+            <div className="bg-white mx-2 shadow-lg rounded-lg p-6 mb-6 md:mb-0 flex-1 md:w-1/3">
               <h2 className="text-3xl font-semibold text-blue-600 mb-4">
                 My Background
               </h2>
@@ -40,7 +40,7 @@ const About = () => {
               </p>
             </div>
 
-            <div className="bg-white mx-4 shadow-lg rounded-lg p-6 mb-6 md:mb-0 w-full md:w-1/3">
+            <div className="bg-white mx-2 shadow-lg rounded-lg p-6 mb-6 md:mb-0 flex-1 md:w-1/3">
               <h2 className="text-3xl font-semibold text-blue-600 mb-4">
                 Interests
               </h2>
@@ -65,16 +65,16 @@ const About = () => {
             or connect with me on social media!
           </p>
 
-          <div className="flex justify-center">
+          <div className="flex justify-center flex-wrap">
             <a
               href="https://zw.linkedin.com/in/augustine-zuka-9768ab32b"
-              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-500 transition duration-300 mx-2"
+              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-500 transition duration-300 mx-2 mb-2"
             >
               LinkedIn
             </a>
             <a
               href="https://github.com/augustinezuka"
-              className="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition duration-300 mx-2"
+              className="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition duration-300 mx-2 mb-2"
             >
               GitHub
             </a>

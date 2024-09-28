@@ -10,7 +10,7 @@ const Projects = () => {
 
   return (
     <section className="py-16 px-4 h-full">
-      <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-blue-500 h-full" />
+      <div className="absolute inset-0 bg-gradient-to-r from-green-300 to-blue-200 h-full" />
       <div className="container mx-auto text-center relative z-10">
         <h2 className="text-4xl font-bold text-black mb-4">My Projects</h2>
         <p className="text-lg text-gray-600 mb-8">
