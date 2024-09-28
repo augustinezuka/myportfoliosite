@@ -15,7 +15,7 @@ const About = () => {
         </p>
 
         <div className="flex flex-col md:flex-row md:justify-around mb-10">
-          <div className="bg-white shadow-lg rounded-lg p-6 mb-6 md:mb-0 w-full md:w-1/3">
+          <div className="bg-white mx-4 shadow-lg rounded-lg p-6 mb-6 md:mb-0 w-full md:w-1/3">
             <h2 className="text-3xl font-semibold text-blue-600 mb-4">
               My Skills
             </h2>
@@ -27,7 +27,7 @@ const About = () => {
             </ul>
           </div>
 
-          <div className="bg-white shadow-lg rounded-lg p-6 mb-6 md:mb-0 w-full md:w-1/3">
+          <div className="bg-white mx-4 shadow-lg rounded-lg p-6 mb-6 md:mb-0 w-full md:w-1/3">
             <h2 className="text-3xl font-semibold text-blue-600 mb-4">
               My Background
             </h2>
@@ -39,7 +39,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="bg-white shadow-lg rounded-lg p-6 mb-6 md:mb-0 w-full md:w-1/3">
+          <div className="bg-white mx-4 shadow-lg rounded-lg p-6 mb-6 md:mb-0 w-full md:w-1/3">
             <h2 className="text-3xl font-semibold text-blue-600 mb-4">
               Interests
             </h2>
