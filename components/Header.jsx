@@ -26,7 +26,7 @@ export default function Header() {
         </button>
 
         <nav className="hidden lg:flex lg:space-x-6">
-          {["Home", "Projects", "About", "Contact"].map((item) => (
+          {[ "Projects", "About", "Contact"].map((item) => (
             <Link
               key={item}
               className="py-2 text-gray-700 hover:text-blue-500 transition duration-200"
@@ -54,10 +54,10 @@ export default function Header() {
               </button>
             </div>
 
-            {["Home", "Projects", "About", "Contact"].map((item) => (
+            {[ "Projects", "About", "Contact"].map((item) => (
               <Link
                 key={item}
-                className="block py-2 text-gray-700 px-4 rounded-lg hover:bg-blue-500 hover:text-black transition duration-200"
+                className="block py-2 text-gray-700 px-4 rounded-lg hover:text-blue-500 hover:font-bold transition duration-200"
                 href={`/${item.toLowerCase()}`}
               >
                 {item}
@@ -67,7 +67,7 @@ export default function Header() {
             <a
               href="/resume.pdf"
               className="mt-4 text-blue-600 px-4 py-2 rounded-lg underline transition duration-300 transform hover:scale-105"
-              download="assets/Augustine_Resume.pdf"
+              download={"assets/Augustine_Resume.pdf"}
             >
               Download Resume
             </a>
@@ -78,7 +78,7 @@ export default function Header() {
           <a
             href="/resume.pdf"
             className="bg-white text-blue-600 px-4 py-2 rounded-lg shadow hover:bg-gray-100 transition duration-300 transform hover:scale-105"
-            download="assets/Augustine_Resume.pdf"
+            download={"assets/Augustine_Resume.pdf"}
           >
             Download Resume
           </a>
