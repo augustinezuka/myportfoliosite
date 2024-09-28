@@ -14,8 +14,8 @@ const Projects = () => {
       <div className="container mx-auto text-center relative z-10">
         <h2 className="text-4xl font-bold text-black mb-4">My Projects</h2>
         <p className="text-lg text-gray-600 mb-8">
-          Explore some of the projects I've worked on, showcasing my skills in
-          front-end development and web/mobile apps.
+          Explore some of the projects I&apos;ve worked on, showcasing my skills
+          in front-end development and web/mobile apps.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           <div className="bg-white p-6 rounded-lg shadow-md transform transition duration-300 hover:shadow-xl hover:scale-105">
@@ -60,7 +60,6 @@ const Projects = () => {
           Contact Me
         </button>
 
-        {/* Modal */}
         {isModalOpen && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
             <div className="bg-white rounded-lg p-8 w-11/12 md:w-1/3">
