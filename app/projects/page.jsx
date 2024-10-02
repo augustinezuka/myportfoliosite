@@ -9,7 +9,7 @@ const Projects = () => {
   const handleCloseModal = () => setModalOpen(false);
 
   return (
-    <section className="py-16 px-4 h-full">
+    <section className="min-h-screen inset-0 bg-gradient-to-r from-green-300 to-blue-200 py-16 px-4 h-full">
       <div className="absolute inset-0 bg-gradient-to-r from-green-300 to-blue-200 h-full" />
       <div className="container mx-auto text-center relative z-10">
         <h2 className="text-4xl font-bold text-black mb-4">My Projects</h2>

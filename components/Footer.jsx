@@ -1,7 +1,7 @@
 "use client";
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-r from-red-400 to-red-800 text-white py-10">
+    <footer className="bg-gradient-to-r from-red-400 to-red-800 text-white py-10" id="footer">
       <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <div className="text-center sm:text-left">
           <h4 className="text-2xl font-bold mb-2 underline">Contact Me</h4>
