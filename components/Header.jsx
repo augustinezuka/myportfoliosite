@@ -78,9 +78,9 @@ export default function Header() {
               <button onClick={() => setIsOpen(false)}>Contact</button>
             </Link>
             <a
-              href="/resume.pdf"
+              href="assets/Augustine_Resume.pdf"
               className="mt-4 text-blue-600 px-4 py-2 rounded-lg underline transition duration-300 transform hover:scale-105"
-              download={"assets/Augustine_Resume.pdf"}
+              download={"augustine's pdf"}
             >
               Download Resume
             </a>
@@ -89,9 +89,9 @@ export default function Header() {
 
         <div className="hidden lg:block">
           <a
-            href="/resume.pdf"
+            href="assets/Augustine_Resume.pdf"
             className="bg-white text-blue-600 px-4 py-2 rounded-lg shadow hover:bg-gray-100 transition duration-300 transform hover:scale-105"
-            download={"assets/Augustine_Resume.pdf"}
+            download={"augustine's pdf"}
           >
             Download Resume
           </a>

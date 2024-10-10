@@ -37,15 +37,14 @@ const Projects = () => {
 
           <div className="bg-white p-6 rounded-lg shadow-md transform transition duration-300 hover:shadow-xl hover:scale-105">
             <div className="text-4xl mb-2">📱</div>
-            <h3 className="text-xl font-semibold text-blue-600">
-              Social Media App
-            </h3>
+            <h3 className="text-xl font-semibold text-blue-600">A Umbiro</h3>
             <p className="text-gray-600 mt-2">
-              A cross-platform social media app using React Native and Expo.
+              I made a landing site for digital nyika
             </p>
             <Link
-              href="/projects/social-media"
+              href="https//www.umbiro.com"
               className="text-red-600 mt-4 inline-block hover:underline"
+              target="_blank"
             >
               View Project
             </Link>
