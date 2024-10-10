@@ -45,6 +45,7 @@ const Projects = () => {
               href="https//www.umbiro.com"
               className="text-red-600 mt-4 inline-block hover:underline"
               target="_blank"
+               rel="noopener noreferrer"
             >
               View Project
             </Link>
