@@ -41,14 +41,14 @@ const Projects = () => {
             <p className="text-gray-600 mt-2">
               I made a landing site for digital nyika
             </p>
-            <Link
+            <a
               href="https//www.umbiro.com"
               className="text-red-600 mt-4 inline-block hover:underline"
               target="_blank"
                rel="noopener noreferrer"
             >
               View Project
-            </Link>
+            </a>
           </div>
         </div>
         <button
