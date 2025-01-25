@@ -1,3 +1,6 @@
+"use client"
+
+import { motion } from "framer-motion";
 import Gravity, { MatterBody } from "../fancy/gravity";
 
 const skills = [
@@ -34,11 +37,13 @@ export default function HeroSec() {
             x={`${Math.floor(Math.random() * 100)}%`}
             y={`${Math.floor(Math.random() * 30)}%`}
           >
-            <div
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
               className={`text-xl sm:text-2xl md:text-3xl ${skill.color} text-white rounded-full hover:cursor-grab px-8 py-4`}
             >
               {skill.name}
-            </div>
+            </motion.div>
           </MatterBody>
         ))}
       </Gravity>

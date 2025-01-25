@@ -1,31 +1,31 @@
 "use client"
 
-import {
-  createContext,
-  forwardRef,
-  ReactNode,
-  useCallback,
-  useContext,
-  useEffect,
-  useImperativeHandle,
-  useRef,
-  useState,
-} from "react"
 import { calculatePosition } from "@/utils/calculate-position"
 import { parsePathToVertices } from "@/utils/svg-path-to-vertices"
 import { debounce } from "lodash"
 import Matter, {
-  Bodies,
-  Common,
-  Engine,
-  Events,
-  Mouse,
-  MouseConstraint,
-  Query,
-  Render,
-  Runner,
-  World,
+    Bodies,
+    Common,
+    Engine,
+    Events,
+    Mouse,
+    MouseConstraint,
+    Query,
+    Render,
+    Runner,
+    World,
 } from "matter-js"
+import {
+    createContext,
+    forwardRef,
+    ReactNode,
+    useCallback,
+    useContext,
+    useEffect,
+    useImperativeHandle,
+    useRef,
+    useState,
+} from "react"
 
 import { cn } from "@/lib/utils"
 
@@ -142,11 +142,11 @@ const Gravity = forwardRef<GravityRef, GravityProps>(
   ) => {
     const canvas = useRef<HTMLDivElement>(null)
     const engine = useRef(Engine.create())
-    const render = useRef<Render>()
-    const runner = useRef<Runner>()
+    const render = useRef<Render | null>(null)
+    const runner = useRef<Runner | null>(null)
     const bodiesMap = useRef(new Map<string, PhysicsBody>())
-    const frameId = useRef<number>()
-    const mouseConstraint = useRef<Matter.MouseConstraint>()
+    const frameId = useRef<number | null>(null)
+    const mouseConstraint = useRef<Matter.MouseConstraint | null>(null)
     const mouseDown = useRef(false)
     const [canvasSize, setCanvasSize] = useState({ width: 0, height: 0 })
 

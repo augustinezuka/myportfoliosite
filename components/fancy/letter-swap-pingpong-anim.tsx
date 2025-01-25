@@ -1,18 +1,18 @@
 "use client"
 
-import { useState } from "react"
-import {
-  DynamicAnimationOptions,
-  motion,
-  stagger,
-  useAnimate,
-} from "motion/react"
 import { debounce } from "lodash"
+import {
+    AnimationOptions,
+    motion,
+    stagger,
+    useAnimate,
+} from "motion/react"
+import { useState } from "react"
 
 interface TextProps {
   label: string
   reverse?: boolean
-  transition?: DynamicAnimationOptions
+  transition?: AnimationOptions
   staggerDuration?: number
   staggerFrom?: "first" | "last" | "center" | number
   className?: string
@@ -35,7 +35,7 @@ const LetterSwapPingPong = ({
   const [scope, animate] = useAnimate()
   const [isHovered, setIsHovered] = useState(false)
 
-  const mergeTransition = (baseTransition: DynamicAnimationOptions) => ({
+  const mergeTransition = (baseTransition: AnimationOptions) => ({
     ...baseTransition,
     delay: stagger(staggerDuration, {
       from: staggerFrom,
