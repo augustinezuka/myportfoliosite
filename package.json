@@ -1,25 +1,38 @@
 {
-  "name": "augustine_portfolio_website",
+  "name": "myportfoliosite",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "lucide-react": "^0.446.0",
-    "next": "14.2.13",
-    "react": "^18",
-    "react-dom": "^18"
+    "@radix-ui/react-dropdown-menu": "^2.1.5",
+    "@radix-ui/react-slot": "^1.1.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.0.5",
+    "lodash": "^4.17.21",
+    "lucide-react": "^0.474.0",
+    "matter-js": "^0.20.0",
+    "motion": "^12.0.5",
+    "next": "15.1.6",
+    "next-themes": "^0.4.4",
+    "poly-decomp": "^0.3.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "svg-path-commander": "^2.1.7",
+    "tailwind-merge": "^2.6.0",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "@types/node": "22.7.1",
-    "@types/react": "18.3.9",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.13",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
     "postcss": "^8",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
   }
 }
