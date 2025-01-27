@@ -1,7 +1,7 @@
 "use client"
 
-import { Github, Linkedin, Twitter } from "lucide-react"
 import { motion } from "framer-motion"
+import { Github, Linkedin, Twitter } from "lucide-react"
 import Link from "next/link"
 
 const Footer = () => {
@@ -12,9 +12,9 @@ const Footer = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="bg-primary/60 backdrop-blur-md py-8 z-20"
+      className="sticky z-0 bottom-0 left-0 w-full h-[100vh] bg-primary/60  py-8 "
     >
-      <div className="container mx-auto px-4">
+      <div className=" mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -78,4 +78,3 @@ const Footer = () => {
 }
 
 export default Footer
-

@@ -14,7 +14,7 @@ const skills = [
   { name: "Node.js", color: "bg-green-600" },
   { name: "Svelte", color: "bg-orange-600" },
   { name: "Python", color: "bg-yellow-500" },
-  { name: "Next.js", color: "bg-gray-900" },
+  { name: "Next.js", color: "bg-gray-900 dark:bg-white dark:text-black" },
   { name: "Material UI", color: "bg-blue-300" },
   { name: "GraphQL", color: "bg-pink-400" },
   { name: "PostgreSQL", color: "bg-indigo-500" },
@@ -23,7 +23,7 @@ const skills = [
 
 export default function HeroSec() {
   return (
-    <div className="w-full z-10 h-[92vh] flex flex-col relative font-azeretMono">
+    <div className="w-full  h-[92vh] flex flex-col font-azeretMono">
       <motion.div initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -36,7 +36,7 @@ export default function HeroSec() {
         <a href="#contact">Get in Touch</a>
       </Button>
       </motion.div>
-      <Gravity gravity={{ x: 0, y: 1 }} className="w-full h-full">
+      <Gravity gravity={{ x: 0, y: 1 }} className="absolute inset-0 z-0">
         {skills.map((skill) => (
           <MatterBody
             key={skill.name}

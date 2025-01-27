@@ -20,13 +20,13 @@ const NotFound = () => {
 
   const handleMouseEnter = () => {
     setButtonPosition({
-      x: (Math.random() - 0.5) * 300,
-      y: (Math.random() - 0.5) * 300,
+      x: (Math.random() - 0.5) * 200,
+      y: (Math.random() - 0.5) * 200,
     })
   }
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-blue-50 to-blue-100 dark:from-red-900 dark:to-red-800 text-red-800 dark:text-blue-100 p-4">
+    <div className="flex flex-col items-center justify-center min-h-screen text-red-800 dark:text-blue-100 p-4">
       <motion.div
         initial={{ scale: 0, rotate: -180 }}
         animate={{ scale: 1, rotate: 0 }}

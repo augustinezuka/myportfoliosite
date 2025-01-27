@@ -26,9 +26,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          <main className="flex-grow z-10">{children}</main>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col h-screen`}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem >
+          <main className="flex-grow bg-background z-10">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>

@@ -1,5 +1,6 @@
 "use client"
 
+import Header from "@/components/custom/header"
 import HeroSec from "@/components/custom/hero"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -8,8 +9,8 @@ import Image from "next/image"
 
 export default function Home() {
   return (
-    <div className="container mx-auto px-4 py-8">
-
+    <div className=" mx-auto px-4 py-8">
+ <Header/>
       <HeroSec/>
 
       <section id="about" className="py-16">
