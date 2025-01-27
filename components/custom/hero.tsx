@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Gravity, { MatterBody } from "../fancy/gravity";
+import { Button } from "../ui/button";
 
 const skills = [
   { name: "Nest JS", color: "bg-pink-600" },
@@ -22,13 +23,19 @@ const skills = [
 
 export default function HeroSec() {
   return (
-    <div className="w-full z-10 h-[100vh] flex flex-col relative font-azeretMono">
-      <div className="pt-20 text-6xl sm:text-7xl md:text-8xl w-full text-center font-calendas italic">
-        My Tech Stack
-      </div>
+    <div className="w-full z-10 h-[92vh] flex flex-col relative font-azeretMono">
+      <motion.div initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="pt-20 flex flex-col items-center text-5xl sm:text-6xl space-y-3 md:text-7xl w-full font-calendas ">
+        Augustine Zuka
       <p className="pt-4 text-base sm:text-xl md:text-2xl text-foreground/70 w-full text-center">
-        These are some of my skills
+        Fullstack Developer | Problem Solver | Tech Enthusiast
       </p>
+      <Button className="max-w-52" asChild>
+        <a href="#contact">Get in Touch</a>
+      </Button>
+      </motion.div>
       <Gravity gravity={{ x: 0, y: 1 }} className="w-full h-full">
         {skills.map((skill) => (
           <MatterBody

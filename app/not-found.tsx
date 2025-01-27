@@ -1,54 +1,102 @@
-"use client";
+"use client"
 
-import { Button } from "@/components/ui/button"; // Assuming you're using a UI button component from shadcn/ui or similar
-import { motion } from "framer-motion";
-import Link from "next/link";
+import NotFoundIllustration from "@/components/NotFoundIllustration"
+import { Button } from "@/components/ui/button"
+import { motion, useAnimation } from "framer-motion"
+import Link from "next/link"
+import { useEffect, useState } from "react"
 
 const NotFound = () => {
+  const [buttonPosition, setButtonPosition] = useState({ x: 0, y: 0 })
+  const controls = useAnimation()
+  const [failedAttempts, setFailedAttempts] = useState(0)
+
+  useEffect(() => {
+    controls.start({
+      x: [0, -10, 10, -10, 10, 0],
+      transition: { duration: 0.5, loop: Number.POSITIVE_INFINITY, ease: "easeInOut" },
+    })
+  }, [controls])
+
+  const handleMouseEnter = () => {
+    setButtonPosition({
+      x: (Math.random() - 0.5) * 300,
+      y: (Math.random() - 0.5) * 300,
+    })
+  }
+
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 text-gray-800">
-      {/* Animated 404 text */}
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-blue-50 to-blue-100 dark:from-red-900 dark:to-red-800 text-red-800 dark:text-blue-100 p-4">
+      <motion.div
+        initial={{ scale: 0, rotate: -180 }}
+        animate={{ scale: 1, rotate: 0 }}
+        transition={{ duration: 1, ease: "backOut" }}
+      >
+        <NotFoundIllustration />
+      </motion.div>
+
       <motion.h1
-        className="text-9xl font-extrabold text-gray-800 mb-4"
-        initial={{ scale: 0.5, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.5, ease: "easeInOut" }}
+        className="text-9xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-blue-400 dark:from-red-300 dark:to-blue-200 mb-4 relative"
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
       >
         404
+        <motion.span
+          className="absolute top-0 left-0 w-full h-full"
+          animate={controls}
+          style={{
+            textShadow: "2px 0 0 #ff00ff, -2px 0 0 #00ffff",
+            opacity: 0.5,
+          }}
+        >
+          404
+        </motion.span>
       </motion.h1>
 
-      {/* Subtitle */}
       <motion.p
-        className="text-xl text-gray-600 mb-8"
-        initial={{ y: 20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.3, duration: 0.5, ease: "easeInOut" }}
+        className="text-xl mb-8 text-center"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4, duration: 0.5 }}
       >
         Oops! The page you're looking for doesn't exist.
+        <br />
+        But don't worry, you can still have some fun here!
       </motion.p>
 
-      {/* Button to go back home */}
       <motion.div
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        transition={{ delay: 0.6, duration: 0.4 }}
+        transition={{ delay: 0.8, duration: 0.4 }}
+        style={{ x: buttonPosition.x, y: buttonPosition.y }}
+        whileHover={{ scale: 0.9 }}
       >
         <Link href="/">
-          <Button className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700">
-            Go Back Home
+          <Button
+            onMouseEnter={handleMouseEnter}
+            onClick={() => setFailedAttempts(failedAttempts + 1)}
+            className="px-6 py-3 bg-gradient-to-r from-red-600 to-blue-400 dark:from-red-500 dark:to-blue-300 text-white rounded-lg shadow-lg hover:from-red-700 hover:to-blue-500 dark:hover:from-red-600 dark:hover:to-blue-400 transition-all duration-300"
+          >
+            Try to click me!
           </Button>
         </Link>
       </motion.div>
 
-      {/* Decorative element */}
-      <motion.div
-        className="mt-16 w-32 h-32 rounded-full bg-blue-500"
-        initial={{ y: -50, opacity: 0 }}
-        animate={{ y: 0, opacity: 0.1 }}
-        transition={{ duration: 1.5, repeat: Infinity, repeatType: "mirror" }}
-      ></motion.div>
+      <motion.p
+        className="mt-4 text-sm"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1, duration: 0.5 }}
+      >
+        {failedAttempts === 0
+          ? "Tip: The button is shy. You might need to be quick to catch it!"
+          : failedAttempts < 5
+            ? `Nice try! You've almost got it. Attempts: ${failedAttempts}`
+            : `You're persistent! Keep trying. Attempts: ${failedAttempts}`}
+      </motion.p>
     </div>
-  );
-};
+  )
+}
 
-export default NotFound;
+export default NotFound
