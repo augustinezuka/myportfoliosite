@@ -32,7 +32,7 @@ export default function Home() {
           >
             <p className="text-lg mb-4">
               Hi there! I'm Augustine Zuka, a passionate fullstack developer based in Zimbabwe. With a keen eye for
-              detail and a love for clean, efficient code, I specialize in creating robust web applications that solve
+              detail and a love for clean, efficient code, I specialize in creating robust web and mobile applications that solve
               real-world problems.
             </p>
             <p className="text-lg">

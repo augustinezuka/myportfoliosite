@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { Github, Linkedin, Twitter } from "lucide-react"
 import Link from "next/link"
+import toast from "react-hot-toast"
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -29,7 +30,15 @@ const Footer = () => {
               </Link>
             </motion.p>
             <motion.p whileHover={{ scale: 1.05 }}>
-              <span className="hover:text-blue-200 transition duration-300">+263 786 831 708</span>
+              <span onClick={()=>{
+               navigator.clipboard.writeText("+263 786 831 708").then(
+                 ()=>{
+                toast.success("Phone number copied to clipboard")
+                 }
+               ).catch(err => {
+                 toast.error("Failed to copy phone number");
+               })
+              }} className="hover:text-blue-200 transition cursor-pointer duration-300">+263 786 831 708</span>
             </motion.p>
           </motion.div>
 

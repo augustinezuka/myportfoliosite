@@ -1,13 +1,14 @@
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuLabel,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { Menu } from "lucide-react"
 import Link from "next/link"
+import toast from "react-hot-toast"
 import LetterSwapPingPong from "../fancy/letter-swap-pingpong-anim"
 import ComesInGoesOutUnderline from "../fancy/underline-comes-in-goes-out"
 import { ModeToggle } from "../mode-toggle"
@@ -16,11 +17,11 @@ import { Button } from "../ui/button"
 
 export default function Header() {
   return (
-    <header className="fixed w-full z-30 p-3 flex justify-between items-center h-[10vh]">
+    <header className=" w-full z-30 p-3 flex justify-between items-center h-[10vh]">
       <div >
         <LetterSwapPingPong
                  className="text-3xl font-bold"
-                 label="Hi I'm Augustine"
+                  label="Welcome to my portfolio"
                  staggerFrom={"center"}
                  reverse={false}
                />
@@ -30,7 +31,9 @@ export default function Header() {
 
           <ModeToggle/>
 
- <Button className="text-xl text-white">Download resume pdf</Button>
+ <Button className="text-xl text-white" onClick={()=>{
+   toast.success("Done")
+ }}>Download resume pdf</Button>
 
 
  <Button variant="link">

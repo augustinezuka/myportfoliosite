@@ -2,6 +2,7 @@ import Footer from "@/components/Footer"
 import { ThemeProvider } from "@/components/theme-provider"
 import type { Metadata } from "next"
 import { Geist, Azeret_Mono as Geist_Mono } from "next/font/google"
+import { Toaster } from "react-hot-toast"
 import "./globals.css"
 
 const geistSans = Geist({
@@ -28,7 +29,9 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col h-screen`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem >
-          <main className="flex-grow bg-background z-10">{children}</main>
+          <main className="flex-grow bg-background z-10">{children}
+          <Toaster position="top-left"/>
+          </main>
           <Footer />
         </ThemeProvider>
       </body>
