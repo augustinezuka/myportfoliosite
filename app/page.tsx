@@ -1,5 +1,7 @@
 "use client";
 
+import AboutSection from "@/components/about-section";
+import ContactSection from "@/components/custom/contact";
 import Header from "@/components/custom/header";
 import HeroSec from "@/components/custom/hero";
 import Footer from "@/components/Footer";
@@ -15,7 +17,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function Home() {
-  const projects = [
+  /**const projects = [
     {
       title: "Real Estate App",
       desc: "A real-time property listing platform with AI-based search and recommendation system.",
@@ -26,13 +28,22 @@ export default function Home() {
       title: "Nurse Staffing Platform",
       desc: "A platform connecting healthcare providers with short-term medical staff.",
       img: "/projects/nurse-platform.png",
-      link: "https://nurse.zuka.dev",
+      link: "https://bans.umbiro.com",
     },
     {
       title: "Minimal Weather App",
       desc: "A sleek weather dashboard built with Next.js, Tailwind, and OpenWeather API.",
       img: "/projects/weather-app.png",
       link: "https://weather.zuka.dev",
+    },
+  ];*/
+
+  const projects = [
+    {
+      title: "Nurse Staffing Platform",
+      desc: "A platform connecting healthcare providers with short-term medical staff.",
+      img: "/projects/nurse-platform.png",
+      link: "https://bans.umbiro.com",
     },
   ];
 
@@ -41,8 +52,8 @@ export default function Home() {
       <main className="flex flex-col items-center justify-center mx-auto px-4 sm:px-8 py-8">
         <Header />
         <HeroSec />
-
         {/* ABOUT SECTION */}
+        <AboutSection />
         <section id="about" className="py-20 w-full">
           <h2 className="text-4xl font-extrabold mb-12 text-center tracking-tight">
             About Me
@@ -135,62 +146,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* CONTACT SECTION */}
-        <section id="contact" className="py-20 w-full">
-          <h2 className="text-4xl font-extrabold mb-12 text-center tracking-tight">
-            Get in Touch
-          </h2>
-
-          <motion.form
-            whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: 30 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-lg mx-auto space-y-5 bg-muted/30 p-8 rounded-xl shadow-md"
-          >
-            <div>
-              <label htmlFor="name" className="block mb-2 font-medium">
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                className="w-full p-2 border rounded-md bg-background"
-                required
-              />
-            </div>
-
-            <div>
-              <label htmlFor="email" className="block mb-2 font-medium">
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                className="w-full p-2 border rounded-md bg-background"
-                required
-              />
-            </div>
-
-            <div>
-              <label htmlFor="message" className="block mb-2 font-medium">
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows={4}
-                className="w-full p-2 border rounded-md bg-background"
-                required
-              ></textarea>
-            </div>
-
-            <Button type="submit" className="w-full">
-              Send Message
-            </Button>
-          </motion.form>
-        </section>
+        <ContactSection />
       </main>
       <Footer />
     </>

@@ -5,6 +5,8 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "react-hot-toast";
 import { Suspense } from "react";
 import "./globals.css";
+import LightRays from "@/components/LightRays";
+import Particles from "@/components/Particles";
 
 const nunito = localFont({
   src: [
@@ -39,17 +41,26 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${nunito.variable} font-sans antialiased`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Suspense fallback={null}>
-            {children}
-            <Toaster position="bottom-right" />
-          </Suspense>
-        </ThemeProvider>
+        <div className="fixed inset-0 z-0">
+          <LightRays
+            raysOrigin="top-center"
+            raysColor="#3b82f6"
+            raysSpeed={0.5}
+            lightSpread={1.2}
+            rayLength={1.5}
+            fadeDistance={1.2}
+            saturation={0.8}
+            followMouse={true}
+            mouseInfluence={0.15}
+          />
+        </div>
+        <div className="fixed inset-0 z-0">
+          <Particles />
+        </div>
+        <Suspense fallback={null}>
+          {children}
+          <Toaster position="bottom-right" />
+        </Suspense>
       </body>
     </html>
   );

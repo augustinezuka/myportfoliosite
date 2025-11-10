@@ -19,17 +19,16 @@ import ComesInGoesOutUnderline from "../fancy/underline-comes-in-goes-out";
 export default function Header() {
   const handleDownloadResume = () => {
     toast.success("Downloading resume...");
-    // You can later update this to actually download the PDF file, e.g.:
-    // window.open("/resume.pdf", "_blank");
+    window.open("/resume.pdf", "_blank");
   };
 
   return (
-    <header className="w-full z-30 px-4 sm:px-8 py-6 flex justify-between items-center  backdrop-blur-md border-b border-border/40 sticky top-0">
-      {/* Left: Brand or Title */}
+    <header className="w-full z-50 px-4 sm:px-8 py-6 flex justify-between items-center backdrop-blur-md border-border/40 sticky top-0 bg-transparent">
+      {/* Left: Brand */}
       <div className="flex items-center">
         <LetterSwapPingPong
           className="text-2xl sm:text-3xl font-bold"
-          label="Welcome to my portfolio"
+          label="Augustine Zuka"
           staggerFrom="center"
           reverse={false}
         />
@@ -37,10 +36,32 @@ export default function Header() {
 
       {/* Desktop Navigation */}
       <nav className="hidden md:flex items-center space-x-4">
-        <ModeToggle />
+        <Button size="sm" className="text-base" onClick={handleDownloadResume}>
+          Resume pdf
+        </Button>
 
-        <Button className="text-base text-white" onClick={handleDownloadResume}>
-          Download Resume
+        <Button variant="link" asChild>
+          <Link prefetch={false} href="#about">
+            <ComesInGoesOutUnderline
+              underlineHeightRatio={0.2}
+              underlinePaddingRatio={-0.3}
+              className="text-lg font-semibold"
+              label="About"
+              direction="right"
+            />
+          </Link>
+        </Button>
+
+        <Button variant="link" asChild>
+          <Link prefetch={false} href="#skills">
+            <ComesInGoesOutUnderline
+              underlineHeightRatio={0.2}
+              underlinePaddingRatio={-0.3}
+              className="text-lg font-semibold"
+              label="Skills"
+              direction="right"
+            />
+          </Link>
         </Button>
 
         <Button variant="link" asChild>
@@ -69,7 +90,8 @@ export default function Header() {
       </nav>
 
       {/* Mobile Menu */}
-      <div className="md:hidden flex items-center">
+      <div className="md:hidden flex items-center gap-2">
+        <ModeToggle />
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="ghost" size="icon" aria-label="Open menu">
@@ -80,6 +102,18 @@ export default function Header() {
           <DropdownMenuContent align="end" className="w-40">
             <DropdownMenuLabel>Menu</DropdownMenuLabel>
             <DropdownMenuSeparator />
+
+            <DropdownMenuItem asChild>
+              <Link href="#about" prefetch={false}>
+                About
+              </Link>
+            </DropdownMenuItem>
+
+            <DropdownMenuItem asChild>
+              <Link href="#skills" prefetch={false}>
+                Skills
+              </Link>
+            </DropdownMenuItem>
 
             <DropdownMenuItem asChild>
               <Link href="#projects" prefetch={false}>
