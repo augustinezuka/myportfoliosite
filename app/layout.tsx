@@ -47,7 +47,7 @@ export default function RootLayout({
             raysColor="#3b82f6"
             raysSpeed={0.5}
             lightSpread={1.2}
-            rayLength={1.5}
+            rayLength={1.6}
             fadeDistance={1.2}
             saturation={0.8}
             followMouse={true}
@@ -55,7 +55,10 @@ export default function RootLayout({
           />
         </div>
         <div className="fixed inset-0 z-0">
-          <Particles />
+          <Particles
+            particleHoverFactor={-0.2}
+            particleCount={Math.floor(250 + Math.random() * 350)}
+          />
         </div>
         <Suspense fallback={null}>
           {children}

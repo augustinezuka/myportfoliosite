@@ -36,7 +36,6 @@ const skills = shuffleArray(skillsArray);
 export default function Hero() {
   const gravityRef = useRef<GravityRef>(null);
 
-  // Stop gravity when user scrolls
   useEffect(() => {
     const handleScroll = () => gravityRef.current?.stop();
     window.addEventListener("scroll", handleScroll);
@@ -90,7 +89,7 @@ export default function Hero() {
       </div>
 
       {/* Right (Gravity Simulation for desktop) */}
-      <div className="hidden md:block w-full md:w-[70%] h-[70vh] relative">
+      <div className="hidden z-0 md:block w-full md:w-[70%] h-[70vh] relative">
         <Gravity ref={gravityRef} className="w-full h-full" resetOnResize>
           {skills.map((skill) => (
             <MatterBody

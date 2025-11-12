@@ -53,13 +53,13 @@ export default function Home() {
         <Header />
         <HeroSec />
         {/* ABOUT SECTION */}
-        <AboutSection />
+
         <section id="about" className="py-20 w-full">
           <h2 className="text-4xl font-extrabold mb-12 text-center tracking-tight">
             About Me
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 mb-9 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -96,6 +96,7 @@ export default function Home() {
               </p>
             </motion.div>
           </div>
+          <AboutSection />
         </section>
 
         {/* PROJECTS SECTION */}

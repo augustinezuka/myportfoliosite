@@ -23,7 +23,7 @@ export default function Header() {
   };
 
   return (
-    <header className="w-full z-50 px-4 sm:px-8 py-6 flex justify-between items-center backdrop-blur-md border-border/40 sticky top-0 bg-transparent">
+    <header className="w-full z-50 px-4 sm:px-8 py-6 flex justify-between items-center backdrop-blur-sm border-border/40 fixed top-0 bg-transparent">
       {/* Left: Brand */}
       <div className="flex items-center">
         <LetterSwapPingPong
@@ -44,7 +44,7 @@ export default function Header() {
           <Link prefetch={false} href="#about">
             <ComesInGoesOutUnderline
               underlineHeightRatio={0.2}
-              underlinePaddingRatio={-0.3}
+              underlinePaddingRatio={0.1}
               className="text-lg font-semibold"
               label="About"
               direction="right"
@@ -56,7 +56,7 @@ export default function Header() {
           <Link prefetch={false} href="#skills">
             <ComesInGoesOutUnderline
               underlineHeightRatio={0.2}
-              underlinePaddingRatio={-0.3}
+              underlinePaddingRatio={0.1}
               className="text-lg font-semibold"
               label="Skills"
               direction="right"
@@ -68,7 +68,7 @@ export default function Header() {
           <Link prefetch={false} href="#projects">
             <ComesInGoesOutUnderline
               underlineHeightRatio={0.2}
-              underlinePaddingRatio={-0.3}
+              underlinePaddingRatio={0.1}
               className="text-lg font-semibold"
               label="Projects"
               direction="right"
@@ -80,7 +80,7 @@ export default function Header() {
           <Link prefetch={false} href="#contact">
             <ComesInGoesOutUnderline
               underlineHeightRatio={0.2}
-              underlinePaddingRatio={-0.3}
+              underlinePaddingRatio={0.1}
               className="text-lg font-semibold"
               label="Contact"
               direction="right"
